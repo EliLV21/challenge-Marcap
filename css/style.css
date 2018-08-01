@@ -26,6 +26,7 @@ body {
 .placeholder {
   margin: 0 25px; }
   .placeholder .img-placeholder {
+    display: none;
     margin: 0 20px; }
     .placeholder .img-placeholder #main-img {
       width: 60%;
@@ -34,6 +35,7 @@ body {
     text-align: initial;
     margin: 0 20px; }
     .placeholder #film-detail .detail-show {
+      display: none;
       width: 60%;
       margin: 0 20%; }
       .placeholder #film-detail .detail-show p {
@@ -52,7 +54,8 @@ body {
           padding: 2px 5px; }
     .placeholder #film-detail .detail-people {
       width: 60%;
-      margin: 0 20%; }
+      margin: 0 20%;
+      display: none; }
       .placeholder #film-detail .detail-people p {
         margin: 1.5px 5px;
         font-size: 15px;
@@ -73,14 +76,15 @@ body {
   #films h3 {
     text-align: initial; }
   #films .img-film {
-    position: relative;
-    width: 16.6%; }
+    display: inline-block;
+    width: 25%; }
     #films .img-film img {
       width: 90%; }
   #films .placeholder-film {
     position: relative;
     bottom: 38px; }
     #films .placeholder-film p {
+      color: #fff;
       font-size: 8px;
       font-weight: 600;
       margin: 0 15px;
@@ -89,15 +93,16 @@ body {
 #people {
   padding: 0 15px; }
   #people .detail-name {
-    position: relative;
-    width: 20%; }
+    width: 20%;
+    display: inline-block; }
     #people .detail-name .img-people {
       width: 90%; }
     #people .detail-name .placeholder-name {
       text-align: center;
       position: relative;
-      bottom: 25px; }
+      bottom: 27.5px; }
       #people .detail-name .placeholder-name p {
+        color: #fff;
         font-size: 10px;
         font-weight: 600;
         margin: 0 15px; }
