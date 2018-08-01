@@ -3,13 +3,103 @@
 
 body {
   text-align: center;
-  background: #f0f0f0; }
+  font-family: 'Roboto', sans-serif;
+  font-size: 12px;
+  color: darkslategrey;
+  margin: 0;
+  padding: 0; }
 
-#categories li:first-child {
-  margin: 0 20px 0 0; }
-#categories li {
-  display: inline-block;
-  text-decoration: none;
-  margin: 0 20px; }
+.nav {
+  background: #F2F5F6; }
+  .nav h1 {
+    font-weight: bold;
+    margin: 0;
+    padding: 15px 0 0 0; }
+  .nav #categories li:first-child {
+    margin: 0 20px 0 0; }
+  .nav #categories li {
+    display: inline-block;
+    text-decoration: none;
+    margin: 0 20px;
+    padding-bottom: 5px; }
+
+.placeholder {
+  margin: 0 25px; }
+  .placeholder .img-placeholder {
+    margin: 0 20px; }
+    .placeholder .img-placeholder #main-img {
+      width: 60%;
+      margin: 0 20%; }
+  .placeholder #film-detail {
+    text-align: initial;
+    margin: 0 20px; }
+    .placeholder #film-detail .detail-show {
+      width: 60%;
+      margin: 0 20%; }
+      .placeholder #film-detail .detail-show p {
+        margin: 1.5px 5px;
+        font-size: 15px;
+        font-weight: 600; }
+        .placeholder #film-detail .detail-show p span {
+          font-weight: 200; }
+      .placeholder #film-detail .detail-show ul {
+        padding: 0;
+        text-align: center; }
+        .placeholder #film-detail .detail-show ul li {
+          font-size: 11px;
+          display: inline-block;
+          text-decoration: none;
+          padding: 2px 5px; }
+    .placeholder #film-detail .detail-people {
+      width: 60%;
+      margin: 0 20%; }
+      .placeholder #film-detail .detail-people p {
+        margin: 1.5px 5px;
+        font-size: 15px;
+        font-weight: 600; }
+        .placeholder #film-detail .detail-people p span {
+          font-weight: 200; }
+      .placeholder #film-detail .detail-people ul {
+        padding: 0;
+        text-align: center; }
+        .placeholder #film-detail .detail-people ul li {
+          font-size: 11px;
+          display: inline-block;
+          text-decoration: none;
+          padding: 2px 5px; }
+
+#films {
+  padding: 0 15px; }
+  #films h3 {
+    text-align: initial; }
+  #films .img-film {
+    position: relative;
+    width: 16.6%; }
+    #films .img-film img {
+      width: 90%; }
+  #films .placeholder-film {
+    position: relative;
+    bottom: 38px; }
+    #films .placeholder-film p {
+      font-size: 8px;
+      font-weight: 600;
+      margin: 0 15px;
+      text-align: end; }
+
+#people {
+  padding: 0 15px; }
+  #people .detail-name {
+    position: relative;
+    width: 20%; }
+    #people .detail-name .img-people {
+      width: 90%; }
+    #people .detail-name .placeholder-name {
+      text-align: center;
+      position: relative;
+      bottom: 25px; }
+      #people .detail-name .placeholder-name p {
+        font-size: 10px;
+        font-weight: 600;
+        margin: 0 15px; }
 
 /*# sourceMappingURL=style.css.map */
