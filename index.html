@@ -4,22 +4,81 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
-    <title>Document</title>
+    <title>Challenge Marcap</title>
 </head>
 <body>
     <div class="nav">
         <h1>Star Wars Data</h1>
         <ul id="categories">
-            <li>Root</li>
-            <li>Films</li>
-            <li>People</li>
+            <li><a href="#">Films</a></li>
+            <li><a href="#">People</a></li>
+            <li><a href="#">Planets</a></li>
+            <li><a href="#">Species</a></li>
+            <li><a href="#">Starships</a></li>
+            <li><a href="#">Vehicles</a></li>
         </ul>
     </div>
-    <div class="breadcrum">
-        <div class="title"></div>
-        <div class="img-breadcrum"></div>
+    <div class="placeholder">
+        <div class="img-placeholder">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Star_Wars_Logo.svg/1280px-Star_Wars_Logo.svg.png" id="main-img" alt="">
+        </div>
+        <div id="film-detail">
+            <div class="detail-show">
+                <h3>DETAILS:</h3>
+                <p>Title: <span class="title-film">Lorem Lipsum</span></p>
+                <p>Episode: <span class="episode-film">Lorem Lipsum</span></p>
+                <p>Producer: <span class="producer-film">Lorem Lipsum</span></p>
+                <p>Relase date: <span class="release-film">Lorem Lipsum</span></p>
+                <ul>
+                    <li><a href="#">Related character</a></li>
+                    <li><a href="#">Related planets</a></li>
+                    <li><a href="#">Related starships</a></li>
+                    <li><a href="#">Related vehicles</a></li>
+                    <li><a href="#">Related species</a></li>
+                </ul>
+            </div>
+            <div class="detail-people">
+                    <h3>PEOPLE DETAIL:</h3>
+                    <p>Name: <span class="people-name">Lorem Lipsum</span></p>
+                    <p>Height: <span class="people-height">Lorem Lipsum</span></p>
+                    <p>Eye color: <span class="people-eye">Lorem Lipsum</span></p>
+                    <p>Hair color: <span class="people-hair">Lorem Lipsum</span></p>
+                    <p>Gender: <span class="people-gender">Lorem Lipsum</span></p>
+                    <p>Birthday: <span class="people-birthday">Lorem Lipsum</span></p>
+                    <ul>
+                        <li><a href="#">Related character</a></li>
+                        <li><a href="#">Related planets</a></li>
+                        <li><a href="#">Related starships</a></li>
+                        <li><a href="#">Related vehicles</a></li>
+                        <li><a href="#">Related species</a></li>
+                    </ul>
+            </div>
+        </div>
     </div>
+    <div id="films">
+        <h3>FILMS:</h3>
+        <div class="img-film">
+            <div class="title"></div>
+            <img src="https://yt3.ggpht.com/a-/ACSszfEXV-31PV4_jgs8cUjxTIl0--Ganl9jFst10w=s900-mo-c-c0xffffffff-rj-k-no" alt="img-films" name="img-films">
+            <div class="placeholder-film">
+                <p class="title-film text-film">Lorem Lipsum</p>
+                <p class="episode-film text-film">Lorem Lipsum</p>
+                <p class="release-film text-film">Lorem Lipsum</p>
+            </div>
+        </div>
+    </div>
+    <div id="people">
+        <div class="detail-name">
+            <img src="https://images.whattoexpect.com/community/groups/13e6ac75-e661-11e7-81cb-9591a19c45ef.jpeg" style="border-radius: 50%;" alt="img-people" name="img-people">
+            <div class="placeholder-name">
+                <p class="people-name text-film">Lorem Lipsum</p>
+            </div>
+        </div>
+    </div>
+    
+    
     
     <script
   src="https://code.jquery.com/jquery-3.3.1.min.js"
