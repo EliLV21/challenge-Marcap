@@ -1,0 +1,17 @@
+*{
+    max-width: 100%;
+}
+body{
+    text-align: center;
+    background: #f0f0f0;
+}
+#categories{
+    li:first-child{
+        margin: 0 20px 0 0 ;
+    }
+    li{
+        display: inline-block;
+        text-decoration: none;
+        margin: 0 20px;
+    }
+}
