@@ -4,8 +4,8 @@ var api = {
 };
 
 function chargePage(){
-    var people = $("#clckPeople")
-    var film = $("#clckFilms")
+    var people = $(".clckPeople")
+    var film = $(".clckFilms")
 
     people.on('click', function(e){
         $("#films").hide()
@@ -40,6 +40,8 @@ function chargePage(){
         }
         $(this).addClass('active')
     })
+
+    printElse()
     
 }
 
@@ -82,27 +84,26 @@ function printPeople(people){
 
     $(".people-name").on('click', function(e){
         for(i=0; i < people.length; i++){
-            for( j=0; j < $(this).length; j++){
-                var peopleUrl = people[i]
-                var thisUrl = $(this)[j]
-                if(thisUrl.id === peopleUrl.url){
-                    containerDetailPeople += templateDetailPeople
-                            .replace('__idAccountant__', accountant++)
-                            .replace('__people-name__', people[j].name)
-                            .replace('__people-height__', people[j].height)
-                            .replace('__people-eye__', people[j].eye_color)
-                            .replace('__people-hair__', people[j].hair_color)
-                            .replace('__people-gender__', people[j].gender)
-                            .replace('__people-birthday__', people[j].birth_year)
-                    console.log($("#detail-info"))
-                $("#detail-info").html(containerDetailPeople)
-                 e.preventDefault()
-                }
-                else{
-                    e.preventDefault()
-                }
+            var peopleUrl = people[i]
+            var thisUrl = $(this)[0].id
+            if(thisUrl === peopleUrl.url){
+                containerDetailPeople += templateDetailPeople
+                        .replace('__idAccountant__', accountant++)
+                        .replace('__people-name__', people[i].name)
+                        .replace('__people-height__', people[i].height)
+                        .replace('__people-eye__', people[i].eye_color)
+                        .replace('__people-hair__', people[i].hair_color)
+                        .replace('__people-gender__', people[i].gender)
+                        .replace('__people-birthday__', people[i].birth_year)
+                        $("#detail-info").html(containerDetailPeople)
+                e.preventDefault()
+            }
+            else{
+                e.preventDefault()
             }
         }
+        $(".img-placeholder").hide()
+        $(".infoFilms").hide()
     })
 }
 
@@ -112,13 +113,13 @@ function printFilms(films){
         '<div class="img-film">' +
             '<img src="https://yt3.ggpht.com/a-/ACSszfEXV-31PV4_jgs8cUjxTIl0--Ganl9jFst10w=s900-mo-c-c0xffffffff-rj-k-no" alt="img-films" name="img-films">' +
             '<div class="placeholder-film">' +
-                '<p class="title-film text-film __classFilm__">__title__</p>' +
+                '<p class="title-film text-film" id="__idFilm__">__title__</p>' +
                 '<p class="episode-film text-film">__episode__</p>' +
                 '<p class="release-film text-film">__release__</p>' +
             '</div>' +
         '</div>'
     films.forEach(function(film, index){
-        containerFilms += templateFilms.replace('__classFilm__', films[index].url)
+        containerFilms += templateFilms.replace('__idFilm__', films[index].url)
             .replace('__title__', films[index].title)
             .replace('__episode__', films[index].episode_id)
             .replace('__release__', films[index].release_date)
@@ -128,41 +129,56 @@ function printFilms(films){
     var containerDetailFilms = ""
     var accountant = 0
     var templateDetailFilms = 
-        '<h3>DETAILS:</h3>' +
-        '<p>Title: <span class="title-film" id="__idFilm__">__title-film__</span></p>' +
-        '<p>Episode: <span class="episode-film">__episode-film__</span></p>' +
-        '<p>Producer: <span class="producer-film">__producer-film__</span></p>' +
-        '<p>Relase date: <span class="release-film">__release-film__</span></p>' +
-        '<ul class="ulList">' +
-            '<li><a href="#">Related character</a></li>' +
-            '<li><a href="#">Related planets</a></li>' +
-            '<li><a href="#">Related starships</a></li>' +
-            '<li><a href="#">Related vehicles</a></li>' +
-            '<li><a href="#">Related species</a></li>' +
-        '</ul>'
-
+        '<div id="infoFilms">' +
+            '<h3>DETAILS:</h3>' +
+            '<p>Title: <span class="title-film">__title-film__</span></p>' +
+            '<p>Episode: <span class="episode-film">__episode-film__</span></p>' +
+            '<p>Producer: <span class="producer-film">__producer-film__</span></p>' +
+            '<p>Relase date: <span class="release-film">__release-film__</span></p>' +
+            '<ul class="ulList">' +
+                '<li><a href="#">Related character</a></li>' +
+                '<li><a href="#">Related planets</a></li>' +
+                '<li><a href="#">Related starships</a></li>' +
+                '<li><a href="#">Related vehicles</a></li>' +
+                '<li><a href="#">Related species</a></li>' +
+            '</ul>' +
+        '</div>'
     $(".img-film").on('click', function(e){
-        for(var i=0; i < films.length; i++){
-            for(var j=0; j < $(this).length; j++){
-                var filmsUrl = films[j]
-                var thisUrl = $(this)[i]
-                console.log(filmsUrl)
-                if(thisUrl.id === filmsUrl.url){
-                    containerDetailFilms += templateDetailFilms.replace('__idFilm__', films[j].url)
-                            .replace('__tittle-film__', films[j].name)
-                            .replace('__episode-film__', films[j].height)
-                            .replace('__producer-film__', films[j].eye_color)
-                            .replace('__release-film__', films[j].hair_color)
-                 $("#detail-info").html(containerDetailFilms)
-                 e.preventDefault()
-                }
-                else{
-                    e.preventDefault()
-                }
+        console.log(this.childNodes[1].childNodes[0].id)
+        for(var j=0; j < films.length; j++){
+            var filmsUrl = films[j].url
+            var thisUrl = this.childNodes[1].childNodes[0].id
+            if(thisUrl === filmsUrl){
+                console.log(films)
+                containerDetailFilms += templateDetailFilms
+                        .replace('__title-film__', films[j].title)
+                        .replace('__episode-film__', films[j].episode_id)
+                        .replace('__producer-film__', films[j].producer)
+                        .replace('__release-film__', films[j].release_date)
+            $(".img-placeholder").hide()
+            $("#infoPeople").hide()
+            $("#detail-info").html(containerDetailFilms)
+                e.preventDefault()
+            }
+            else{
+                e.preventDefault()
             }
         }
     })
 
 }
 
+function printElse(){
+    $(".clckElse").on('click', function(){
+        var containerElse = ""
+        var templateElse = 
+        '<div id="infoElse">' +
+            '<p>Very soon you will see the data of <span>__extraDetail__</span></p>' +
+        '</div>'
+        console.log($(this)[0].name)
+        containerElse += templateElse.replace('__extraDetail__', $(this)[0].name)
+        $(".img-placeholder").hide()
+        $("#detail-info").html(containerElse)
+    })
+}
 $(document).ready(chargePage());
