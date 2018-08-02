@@ -23,14 +23,26 @@ body {
     margin: 0 20px;
     padding-bottom: 5px; }
 
+<<<<<<< Updated upstream
+=======
+.ulList {
+  padding: 0;
+  text-align: center; }
+  .ulList li {
+    font-size: 11px;
+    display: inline-block;
+    text-decoration: none;
+    padding: 2px 5px; }
+
+>>>>>>> Stashed changes
 .placeholder {
   margin: 0 25px; }
   .placeholder .img-placeholder {
-    display: none;
-    margin: 0 20px; }
+    margin: 20px 20px; }
     .placeholder .img-placeholder #main-img {
       width: 60%;
       margin: 0 20%; }
+<<<<<<< Updated upstream
   .placeholder #film-detail {
     text-align: initial;
     margin: 0 20px; }
@@ -70,6 +82,29 @@ body {
           display: inline-block;
           text-decoration: none;
           padding: 2px 5px; }
+=======
+
+#film-detail {
+  text-align: initial;
+  margin: 0 20px; }
+  #film-detail #detail-info {
+    width: 60%;
+    margin: 0 20%; }
+
+#infoFilms p, #infoPeople p {
+  margin: 1.5px 5px;
+  font-size: 15px;
+  font-weight: 600; }
+  #infoFilms p span, #infoPeople p span {
+    font-weight: 200; }
+
+#infoElse {
+  margin-top: 25px;
+  font-size: 14px;
+  text-align: center; }
+  #infoElse span {
+    font-weight: 600; }
+>>>>>>> Stashed changes
 
 #films {
   padding: 0 15px; }

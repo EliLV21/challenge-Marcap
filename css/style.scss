@@ -29,68 +29,56 @@ body{
     }
 }
 
+.ulList{
+    padding: 0;
+    text-align: center;
+    li{
+        font-size: 11px;
+        display: inline-block;
+        text-decoration: none;
+        padding: 2px 5px;
+    }
+}
+
 .placeholder{
     margin: 0 25px;
     .img-placeholder{
-        display: none;
-        margin: 0 20px;
+        margin: 20px 20px;
         #main-img{
             width: 60%;
             margin: 0 20%;
         }
     }
-    #film-detail{
-        text-align: initial;
-        margin: 0 20px;
-        .detail-show{
-            display: none;
-            width: 60%;
-            margin: 0 20%;
-            p{
-                margin: 1.5px 5px;
-                font-size: 15px;
-                font-weight: 600;
-                span{
-                    font-weight: 200;
-                }
-            }
-            ul{
-                padding: 0;
-                text-align: center;
-                li{
-                    font-size: 11px;
-                    display: inline-block;
-                    text-decoration: none;
-                    padding: 2px 5px;
-                }
-            }
-        }
-        .detail-people{
-            width: 60%;
-            margin: 0 20%;
-            display: none;
-            p{
-                margin: 1.5px 5px;
-                font-size: 15px;
-                font-weight: 600;
-                span{
-                    font-weight: 200;
-                }
-            }
-            ul{
-                padding: 0;
-                text-align: center;
-                li{
-                    font-size: 11px;
-                    display: inline-block;
-                    text-decoration: none;
-                    padding: 2px 5px;
-                }
-            }
+}
+#film-detail{
+    text-align: initial;
+    margin: 0 20px;
+    #detail-info{
+        width: 60%;
+        margin: 0 20%;
+    }
+}
+
+#infoFilms, #infoPeople{
+    p{
+        margin: 1.5px 5px;
+        font-size: 15px;
+        font-weight: 600;
+        span{
+            font-weight: 200;
         }
     }
-
 }
+
+#infoElse{
+    margin-top: 25px;
+    font-size: 14px;
+    text-align: center;
+    span{
+        font-weight: 600;
+    }
+}
+
 #films{
     padding: 0 15px;
     h3{
