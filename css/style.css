@@ -4,7 +4,7 @@
 body {
   text-align: center;
   font-family: 'Roboto', sans-serif;
-  font-size: 12px;
+  font-size: 15px;
   color: darkslategrey;
   margin: 0;
   padding: 0; }
@@ -27,7 +27,7 @@ body {
   padding: 0;
   text-align: center; }
   .ulList li {
-    font-size: 11px;
+    font-size: 13px;
     display: inline-block;
     text-decoration: none;
     padding: 2px 5px; }
@@ -39,14 +39,6 @@ body {
     .placeholder .img-placeholder #main-img {
       width: 60%;
       margin: 0 20%; }
-      .placeholder #film-detail #detail-people ul {
-        padding: 0;
-        text-align: center; }
-        .placeholder #film-detail #detail-people ul li {
-          font-size: 11px;
-          display: inline-block;
-          text-decoration: none;
-          padding: 2px 5px; }
 
 #film-detail {
   text-align: initial;
@@ -64,7 +56,7 @@ body {
 
 #infoElse {
   margin-top: 25px;
-  font-size: 14px;
+  font-size: 15px;
   text-align: center; }
   #infoElse span {
     font-weight: 600; }
@@ -83,7 +75,7 @@ body {
     bottom: 38px; }
     #films .placeholder-film p {
       color: #fff;
-      font-size: 8px;
+      font-size: 13px;
       font-weight: 600;
       margin: 0 15px;
       text-align: end; }
@@ -101,7 +93,7 @@ body {
       bottom: 27.5px; }
       #people .detail-name .placeholder-name p {
         color: #fff;
-        font-size: 10px;
+        font-size: 13px;
         font-weight: 600;
         margin: 0 15px; }
 
