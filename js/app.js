@@ -9,6 +9,7 @@ function chargePage(){
 
     people.on('click', function(e){
         $("#films").hide()
+        $("#infoFilms").hide()
         $("#people").show()
         if(people[0].className === 'active'){
             e.preventDefault()
@@ -27,7 +28,7 @@ function chargePage(){
     film.on('click', function(e){
         $("#films").show()
         $("#people").hide()
-
+        $("#infoPeople").hide()
         if(film[0].className === 'active'){
             e.preventDefault()
         }
@@ -62,34 +63,39 @@ function printPeople(people){
     var containerDetailPeople = ""
     var accountant = 0
     var templateDetailPeople = 
-        '<h3>PEOPLE DETAIL:</h3>' +
-        '<p>Name: <span class="people-name people__idAccountant__">__people-name__</span></p>' +
-        '<p>Height: <span class="people-height">__people-height__</span></p>' +
-        '<p>Eye color: <span class="people-eye">__people-eye__</span></p>' +
-        '<p>Hair color: <span class="people-hair">__people-hair__</span></p>' +
-        '<p>Gender: <span class="people-gender">__people-gender__</span></p>' +
-        '<p>Birthday: <span class="people-birthday">__people-birthday__</span></p>' +
-        '<ul>' +
-            '<li><a href="#">Related character</a></li>' +
-            '<li><a href="#">Related planets</a></li>' +
-            '<li><a href="#">Related starships</a></li>' +
-            '<li><a href="#">Related vehicles</a></li>' +
-            '<li><a href="#">Related species</a></li>' +
-        '</ul>'
+        '<div id="infoPeople">' +
+            '<h3>PEOPLE DETAIL:</h3>' +
+            '<p>Name: <span class="people-name people__idAccountant__">__people-name__</span></p>' +
+            '<p>Height: <span class="people-height">__people-height__</span></p>' +
+            '<p>Eye color: <span class="people-eye">__people-eye__</span></p>' +
+            '<p>Hair color: <span class="people-hair">__people-hair__</span></p>' +
+            '<p>Gender: <span class="people-gender">__people-gender__</span></p>' +
+            '<p>Birthday: <span class="people-birthday">__people-birthday__</span></p>' +
+            '<ul class="ulList">' +
+                '<li><a href="#">Related character</a></li>' +
+                '<li><a href="#">Related planets</a></li>' +
+                '<li><a href="#">Related starships</a></li>' +
+                '<li><a href="#">Related vehicles</a></li>' +
+                '<li><a href="#">Related species</a></li>' +
+            '</ul>' +
+        '</div>'
 
-    $(".people-name").on('click', function(e, index){
-        for(var i=0; i <= people.length; i++){
-            for(var j=0; j <= people.length; j++){
-                console.log(people[j].url)
-                if($(this)[i].id === people[j].url){
-                    containerDetailPeople += templateDetailPeople.replace('__idAccountant__', accountant++)
+    $(".people-name").on('click', function(e){
+        for(i=0; i < people.length; i++){
+            for( j=0; j < $(this).length; j++){
+                var peopleUrl = people[i]
+                var thisUrl = $(this)[j]
+                if(thisUrl.id === peopleUrl.url){
+                    containerDetailPeople += templateDetailPeople
+                            .replace('__idAccountant__', accountant++)
                             .replace('__people-name__', people[j].name)
                             .replace('__people-height__', people[j].height)
                             .replace('__people-eye__', people[j].eye_color)
                             .replace('__people-hair__', people[j].hair_color)
                             .replace('__people-gender__', people[j].gender)
                             .replace('__people-birthday__', people[j].birth_year)
-                 $("#detail-people").html(containerDetailPeople)
+                    console.log($("#detail-info"))
+                $("#detail-info").html(containerDetailPeople)
                  e.preventDefault()
                 }
                 else{
@@ -97,7 +103,6 @@ function printPeople(people){
                 }
             }
         }
-        console.log(this)
     })
 }
 
@@ -128,7 +133,7 @@ function printFilms(films){
         '<p>Episode: <span class="episode-film">__episode-film__</span></p>' +
         '<p>Producer: <span class="producer-film">__producer-film__</span></p>' +
         '<p>Relase date: <span class="release-film">__release-film__</span></p>' +
-        '<ul>' +
+        '<ul class="ulList">' +
             '<li><a href="#">Related character</a></li>' +
             '<li><a href="#">Related planets</a></li>' +
             '<li><a href="#">Related starships</a></li>' +
@@ -137,17 +142,18 @@ function printFilms(films){
         '</ul>'
 
     $(".img-film").on('click', function(e){
-        for(var i=0; i <= $(".title-film").length; i++){
-            console.log(films[i])
-            for(var j=0; j <= films.length; j++){
-                console.log(films[j])
-                if($(this)[i].id === films[j].url){
+        for(var i=0; i < films.length; i++){
+            for(var j=0; j < $(this).length; j++){
+                var filmsUrl = films[j]
+                var thisUrl = $(this)[i]
+                console.log(filmsUrl)
+                if(thisUrl.id === filmsUrl.url){
                     containerDetailFilms += templateDetailFilms.replace('__idFilm__', films[j].url)
                             .replace('__tittle-film__', films[j].name)
                             .replace('__episode-film__', films[j].height)
                             .replace('__producer-film__', films[j].eye_color)
                             .replace('__release-film__', films[j].hair_color)
-                 $("#detail-show").html(containerDetailFilms)
+                 $("#detail-info").html(containerDetailFilms)
                  e.preventDefault()
                 }
                 else{
@@ -155,7 +161,6 @@ function printFilms(films){
                 }
             }
         }
-        console.log(this)
     })
 
 }
