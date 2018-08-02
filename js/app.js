@@ -9,6 +9,7 @@ function chargePage(){
 
     people.on('click', function(e){
         $("#films").hide()
+        $("#infoFilms").hide()
         $("#people").show()
         if(people[0].className === 'active'){
             e.preventDefault()
@@ -27,7 +28,7 @@ function chargePage(){
     film.on('click', function(e){
         $("#films").show()
         $("#people").hide()
-
+        $("#infoPeople").hide()
         if(film[0].className === 'active'){
             e.preventDefault()
         }
@@ -64,20 +65,22 @@ function printPeople(people){
     var containerDetailPeople = ""
     var accountant = 0
     var templateDetailPeople = 
-        '<h3>PEOPLE DETAIL:</h3>' +
-        '<p>Name: <span class="people-name people__idAccountant__">__people-name__</span></p>' +
-        '<p>Height: <span class="people-height">__people-height__</span></p>' +
-        '<p>Eye color: <span class="people-eye">__people-eye__</span></p>' +
-        '<p>Hair color: <span class="people-hair">__people-hair__</span></p>' +
-        '<p>Gender: <span class="people-gender">__people-gender__</span></p>' +
-        '<p>Birthday: <span class="people-birthday">__people-birthday__</span></p>' +
-        '<ul>' +
-            '<li><a href="#">Related character</a></li>' +
-            '<li><a href="#">Related planets</a></li>' +
-            '<li><a href="#">Related starships</a></li>' +
-            '<li><a href="#">Related vehicles</a></li>' +
-            '<li><a href="#">Related species</a></li>' +
-        '</ul>'
+        '<div id="infoPeople">' +
+            '<h3>PEOPLE DETAIL:</h3>' +
+            '<p>Name: <span class="people-name people__idAccountant__">__people-name__</span></p>' +
+            '<p>Height: <span class="people-height">__people-height__</span></p>' +
+            '<p>Eye color: <span class="people-eye">__people-eye__</span></p>' +
+            '<p>Hair color: <span class="people-hair">__people-hair__</span></p>' +
+            '<p>Gender: <span class="people-gender">__people-gender__</span></p>' +
+            '<p>Birthday: <span class="people-birthday">__people-birthday__</span></p>' +
+            '<ul class="ulList">' +
+                '<li><a href="#">Related character</a></li>' +
+                '<li><a href="#">Related planets</a></li>' +
+                '<li><a href="#">Related starships</a></li>' +
+                '<li><a href="#">Related vehicles</a></li>' +
+                '<li><a href="#">Related species</a></li>' +
+            '</ul>' +
+        '</div>'
 
     $(".people-name").on('click', function(e){
         for(i=0; i < people.length; i++){
@@ -161,7 +164,6 @@ function printFilms(films){
                 e.preventDefault()
             }
         }
-        
     })
 
 }

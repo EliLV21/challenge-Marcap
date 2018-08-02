@@ -23,8 +23,6 @@ body {
     margin: 0 20px;
     padding-bottom: 5px; }
 
-<<<<<<< Updated upstream
-=======
 .ulList {
   padding: 0;
   text-align: center; }
@@ -34,7 +32,6 @@ body {
     text-decoration: none;
     padding: 2px 5px; }
 
->>>>>>> Stashed changes
 .placeholder {
   margin: 0 25px; }
   .placeholder .img-placeholder {
@@ -42,38 +39,6 @@ body {
     .placeholder .img-placeholder #main-img {
       width: 60%;
       margin: 0 20%; }
-<<<<<<< Updated upstream
-  .placeholder #film-detail {
-    text-align: initial;
-    margin: 0 20px; }
-    .placeholder #film-detail #detail-show {
-      display: none;
-      width: 60%;
-      margin: 0 20%; }
-      .placeholder #film-detail #detail-show p {
-        margin: 1.5px 5px;
-        font-size: 15px;
-        font-weight: 600; }
-        .placeholder #film-detail #detail-show p span {
-          font-weight: 200; }
-      .placeholder #film-detail #detail-show ul {
-        padding: 0;
-        text-align: center; }
-        .placeholder #film-detail #detail-show ul li {
-          font-size: 11px;
-          display: inline-block;
-          text-decoration: none;
-          padding: 2px 5px; }
-    .placeholder #film-detail #detail-people {
-      width: 60%;
-      margin: 0 20%;
-      display: none; }
-      .placeholder #film-detail #detail-people p {
-        margin: 1.5px 5px;
-        font-size: 15px;
-        font-weight: 600; }
-        .placeholder #film-detail #detail-people p span {
-          font-weight: 200; }
       .placeholder #film-detail #detail-people ul {
         padding: 0;
         text-align: center; }
@@ -82,7 +47,6 @@ body {
           display: inline-block;
           text-decoration: none;
           padding: 2px 5px; }
-=======
 
 #film-detail {
   text-align: initial;
@@ -104,7 +68,6 @@ body {
   text-align: center; }
   #infoElse span {
     font-weight: 600; }
->>>>>>> Stashed changes
 
 #films {
   padding: 0 15px; }
