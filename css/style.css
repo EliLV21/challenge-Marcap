@@ -34,38 +34,38 @@ body {
   .placeholder #film-detail {
     text-align: initial;
     margin: 0 20px; }
-    .placeholder #film-detail .detail-show {
+    .placeholder #film-detail #detail-show {
       display: none;
       width: 60%;
       margin: 0 20%; }
-      .placeholder #film-detail .detail-show p {
+      .placeholder #film-detail #detail-show p {
         margin: 1.5px 5px;
         font-size: 15px;
         font-weight: 600; }
-        .placeholder #film-detail .detail-show p span {
+        .placeholder #film-detail #detail-show p span {
           font-weight: 200; }
-      .placeholder #film-detail .detail-show ul {
+      .placeholder #film-detail #detail-show ul {
         padding: 0;
         text-align: center; }
-        .placeholder #film-detail .detail-show ul li {
+        .placeholder #film-detail #detail-show ul li {
           font-size: 11px;
           display: inline-block;
           text-decoration: none;
           padding: 2px 5px; }
-    .placeholder #film-detail .detail-people {
+    .placeholder #film-detail #detail-people {
       width: 60%;
       margin: 0 20%;
       display: none; }
-      .placeholder #film-detail .detail-people p {
+      .placeholder #film-detail #detail-people p {
         margin: 1.5px 5px;
         font-size: 15px;
         font-weight: 600; }
-        .placeholder #film-detail .detail-people p span {
+        .placeholder #film-detail #detail-people p span {
           font-weight: 200; }
-      .placeholder #film-detail .detail-people ul {
+      .placeholder #film-detail #detail-people ul {
         padding: 0;
         text-align: center; }
-        .placeholder #film-detail .detail-people ul li {
+        .placeholder #film-detail #detail-people ul li {
           font-size: 11px;
           display: inline-block;
           text-decoration: none;
